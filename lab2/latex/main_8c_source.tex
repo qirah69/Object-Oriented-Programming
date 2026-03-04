@@ -16,21 +16,22 @@
 \DoxyCodeLine{00026\ \ \ \textcolor{keywordflow}{return}\ NULL;}
 \DoxyCodeLine{00027\ \}}
 \DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \textcolor{keywordtype}{int}\ main()\ \{}
-\DoxyCodeLine{00030\ \ \ \textcolor{keywordtype}{char}\ test\_string[100];}
-\DoxyCodeLine{00031\ \ \ \textcolor{keywordtype}{char}\ target\_char;}
-\DoxyCodeLine{00032\ \ \ printf(\textcolor{stringliteral}{"{}Enter\ a\ string:\ "{}});}
-\DoxyCodeLine{00033\ \ \ fgets(test\_string,\ 100,\ stdin);}
-\DoxyCodeLine{00034\ \ \ printf(\textcolor{stringliteral}{"{}Enter\ a\ character\ to\ search\ for:\ "{}});}
-\DoxyCodeLine{00035\ \ \ scanf(\textcolor{stringliteral}{"{}\%c"{}},\ \&target\_char);}
-\DoxyCodeLine{00036\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *result\ =\ \mbox{\hyperlink{main_8c_af050925ab581a07c9453e9cd637f79f7}{my\_strchr}}(test\_string,\ target\_char);}
-\DoxyCodeLine{00037\ \ \ \textcolor{keywordflow}{if}\ (result\ !=\ NULL)\ \{}
-\DoxyCodeLine{00038\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Character\ '\%c'\ found\ at\ position:\ \%ld\(\backslash\)n"{}},\ target\_char,}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ result\ -\/\ test\_string);}
-\DoxyCodeLine{00040\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00041\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Character\ '\%c'\ not\ found\ in\ the\ string.\(\backslash\)n"{}},\ target\_char);}
-\DoxyCodeLine{00042\ \ \ \}}
-\DoxyCodeLine{00043\ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00044\ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
+\DoxyCodeLine{00038\ \ \ \textcolor{keywordtype}{char}\ test\_string[100];}
+\DoxyCodeLine{00039\ \ \ \textcolor{keywordtype}{char}\ target\_char;}
+\DoxyCodeLine{00040\ \ \ printf(\textcolor{stringliteral}{"{}Enter\ a\ string:\ "{}});}
+\DoxyCodeLine{00041\ \ \ fgets(test\_string,\ 100,\ stdin);}
+\DoxyCodeLine{00042\ \ \ printf(\textcolor{stringliteral}{"{}Enter\ a\ character\ to\ search\ for:\ "{}});}
+\DoxyCodeLine{00043\ \ \ scanf(\textcolor{stringliteral}{"{}\%c"{}},\ \&target\_char);}
+\DoxyCodeLine{00044\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *result\ =\ \mbox{\hyperlink{main_8c_af050925ab581a07c9453e9cd637f79f7}{my\_strchr}}(test\_string,\ target\_char);}
+\DoxyCodeLine{00045\ \ \ \textcolor{keywordflow}{if}\ (result\ !=\ NULL)\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Character\ '\%c'\ found\ at\ position:\ \%ld\(\backslash\)n"{}},\ target\_char,}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ result\ -\/\ test\_string);}
+\DoxyCodeLine{00048\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Character\ '\%c'\ not\ found\ in\ the\ string.\(\backslash\)n"{}},\ target\_char);}
+\DoxyCodeLine{00050\ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00052\ \}}
 
 \end{DoxyCode}

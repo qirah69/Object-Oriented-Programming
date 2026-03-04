@@ -26,6 +26,14 @@ const char *my_strchr(const char *str, char character) {
   return NULL;
 }
 
+/**
+ *@breif main function to test the my_strchr function
+ *
+ *@param none
+ *
+ *@return 0 on successful execution
+ */
+
 int main() {
   char test_string[100];
   char target_char;
