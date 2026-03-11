@@ -4,7 +4,7 @@
  */
 
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
  *@brief recreation of strchr function, which searches for the first
  * occurrence of a character in a string
@@ -35,18 +35,25 @@ const char *my_strchr(const char *str, char character) {
  */
 
 int main() {
-  char test_string[100];
-  char target_char;
-  printf("Enter a string: ");
-  fgets(test_string, 100, stdin);
-  printf("Enter a character to search for: ");
-  scanf("%c", &target_char);
-  const char *result = my_strchr(test_string, target_char);
-  if (result != NULL) {
-    printf("Character '%c' found at position: %ld\n", target_char,
-           result - test_string);
-  } else {
-    printf("Character '%c' not found in the string.\n", target_char);
+  int buffer_size = 100;
+  char *string = malloc(buffer_size * sizeof(char));
+
+  if (string == NULL) {
+    fprintf(stderr, "Memory allocation failed\n");
+    return 1;
   }
+
+  char character;
+  printf("Enter a string: ");
+  fgets(string, 100, stdin);
+  printf("Enter a character to search for: ");
+  scanf("%c", &character);
+  const char *result = my_strchr(string, character);
+  if (result != NULL) {
+    printf("Character '%c' found at position: %ld\n", character, result);
+  } else {
+    printf("Character '%c' not found in the string.\n", character);
+  }
+  free(string);
   return 0;
 }
