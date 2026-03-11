@@ -1,0 +1,45 @@
+\doxysection{main.\+cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+This program defines a \doxylink{classBankAccount}{Bank\+Account} class with basic functionalities such as deposit and withdraw. It also overloads the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator to display account information.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$ostream$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classBankAccount}{Bank\+Account}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{main_8cpp_aeb54944d0cd240e839ce72a5654cfa78}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classBankAccount}{Bank\+Account}} \&account)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This program defines a \doxylink{classBankAccount}{Bank\+Account} class with basic functionalities such as deposit and withdraw. It also overloads the \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator to display account information. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{main_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_aeb54944d0cd240e839ce72a5654cfa78}\index{main.cpp@{main.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily \label{main_8cpp_aeb54944d0cd240e839ce72a5654cfa78} 
+std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os}{, }\item[{const \mbox{\hyperlink{classBankAccount}{Bank\+Account}} \&}]{account}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to which the account information will be sent. \\
+\hline
+{\em account} & The \doxylink{classBankAccount}{Bank\+Account} object whose information is to be displayed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the output stream after inserting the account information into it. The account information includes the name, ID, and balance of the account holder. 
+\end{DoxyReturn}

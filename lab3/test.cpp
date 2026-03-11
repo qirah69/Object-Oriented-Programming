@@ -1,7 +1,19 @@
+/**
+ * @file test.cpp
+ * @brief Test program for BankAccount class
+ */
+
 #include "main.cpp"
 #include <iostream>
 
 // --- Test Implementation ---
+/**
+ * @brief Main function to test the BankAccount class
+ *
+ * @params None
+ *
+ * @returns 0 on successful execution
+ */
 
 int main() {
   std::cout << "\n\n\n--- Creating Account ---\n";

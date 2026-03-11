@@ -1,0 +1,39 @@
+\doxysection{main.\+cpp}
+\hypertarget{main_8cpp_source}{}\label{main_8cpp_source}\mbox{\hyperlink{main_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <ostream>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBankAccount_ab651e752c65614b9358ec7f100b3ce26}{BankAccount}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ std::string\ name;}
+\DoxyCodeLine{00023\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00024\ \ \ \textcolor{keywordtype}{double}\ balance;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \mbox{\hyperlink{classBankAccount_ab651e752c65614b9358ec7f100b3ce26}{BankAccount}}(std::string\ PersonName,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ UserID,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ InitialBalance)}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ :\ name(PersonName),\ id(UserID),\ balance(InitialBalance)\ \{\}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBankAccount_abd2e2f3e3dd634bf92ca1a53af0aec42}{deposit}}(\textcolor{keywordtype}{double}\ amount)\ \{\ balance\ +=\ amount;\ \}}
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBankAccount_ac5bd582816e0dbd59518a37fa010b3cd}{withdraw}}(\textcolor{keywordtype}{double}\ amount)\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{if}\ (amount\ >\ balance)\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Insufficient\ funds"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \ \ \ \ balance\ -\/=\ amount;}
+\DoxyCodeLine{00067\ \ \ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \textcolor{keyword}{friend}\ std::ostream\ \&\mbox{\hyperlink{classBankAccount_aeb54944d0cd240e839ce72a5654cfa78}{operator<<}}(std::ostream\ \&os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classBankAccount}{BankAccount}}\ \&account);}
+\DoxyCodeLine{00081\ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ std::ostream\ \&\mbox{\hyperlink{main_8cpp_aeb54944d0cd240e839ce72a5654cfa78}{operator<<}}(std::ostream\ \&os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classBankAccount_ab651e752c65614b9358ec7f100b3ce26}{BankAccount}}\ \&account)\ \{}
+\DoxyCodeLine{00084\ \ \ os\ <<\ \textcolor{stringliteral}{"{}Name:\ "{}}\ <<\ account.name\ <<\ \textcolor{stringliteral}{"{},\ ID:\ "{}}\ <<\ account.id\ <<\ \textcolor{stringliteral}{"{},\ Balance:\ \$"{}}}
+\DoxyCodeLine{00085\ \ \ \ \ \ <<\ account.balance;}
+\DoxyCodeLine{00086\ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{00087\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,114 @@
+\doxysection{Bank\+Account Class Reference}
+\hypertarget{classBankAccount}{}\label{classBankAccount}\index{BankAccount@{BankAccount}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBankAccount_ab651e752c65614b9358ec7f100b3ce26}{Bank\+Account}} (std\+::string Person\+Name, unsigned int User\+ID, double Initial\+Balance)
+\begin{DoxyCompactList}\small\item\em Constructor to initialize a \doxylink{classBankAccount}{Bank\+Account} object with the account holder\textquotesingle{}s name, ID, and initial balance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBankAccount_abd2e2f3e3dd634bf92ca1a53af0aec42}{deposit}} (double amount)
+\begin{DoxyCompactList}\small\item\em Method to deposit a specified amount into the account. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBankAccount_ac5bd582816e0dbd59518a37fa010b3cd}{withdraw}} (double amount)
+\begin{DoxyCompactList}\small\item\em Method to withdraw a specified amount from the account. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classBankAccount_aeb54944d0cd240e839ce72a5654cfa78}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classBankAccount}{Bank\+Account}} \&account)
+\begin{DoxyCompactList}\small\item\em Overloaded \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator to display the account information in a formatted manner. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{classBankAccount_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBankAccount_ab651e752c65614b9358ec7f100b3ce26}\index{BankAccount@{BankAccount}!BankAccount@{BankAccount}}
+\index{BankAccount@{BankAccount}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{BankAccount()}{BankAccount()}}
+{\footnotesize\ttfamily \label{classBankAccount_ab651e752c65614b9358ec7f100b3ce26} 
+Bank\+Account\+::\+Bank\+Account (\begin{DoxyParamCaption}\item[{std\+::string}]{Person\+Name}{, }\item[{unsigned int}]{User\+ID}{, }\item[{double}]{Initial\+Balance}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor to initialize a \doxylink{classBankAccount}{Bank\+Account} object with the account holder\textquotesingle{}s name, ID, and initial balance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Person\+Name} & The name of the account holder. \\
+\hline
+{\em User\+ID} & The unique identifier for the account. \\
+\hline
+{\em Initial\+Balance} & The initial balance of the account.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \doxylink{classBankAccount}{Bank\+Account} object initialized with the provided parameters. 
+\end{DoxyReturn}
+
+
+\label{doc-func-members}
+\Hypertarget{classBankAccount_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBankAccount_abd2e2f3e3dd634bf92ca1a53af0aec42}\index{BankAccount@{BankAccount}!deposit@{deposit}}
+\index{deposit@{deposit}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{deposit()}{deposit()}}
+{\footnotesize\ttfamily \label{classBankAccount_abd2e2f3e3dd634bf92ca1a53af0aec42} 
+void Bank\+Account\+::deposit (\begin{DoxyParamCaption}\item[{double}]{amount}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to deposit a specified amount into the account. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The amount to be deposited into the account.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. The method updates the balance of the account by adding the deposited amount. 
+\end{DoxyReturn}
+\Hypertarget{classBankAccount_ac5bd582816e0dbd59518a37fa010b3cd}\index{BankAccount@{BankAccount}!withdraw@{withdraw}}
+\index{withdraw@{withdraw}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{withdraw()}{withdraw()}}
+{\footnotesize\ttfamily \label{classBankAccount_ac5bd582816e0dbd59518a37fa010b3cd} 
+void Bank\+Account\+::withdraw (\begin{DoxyParamCaption}\item[{double}]{amount}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to withdraw a specified amount from the account. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The amount to be withdrawn from the account.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. The method checks if the withdrawal amount is greater than the current balance. If it is, it prints an error message and does not update the balance. Otherwise, it subtracts the withdrawal amount from the balance. 
+\end{DoxyReturn}
+
+
+\label{doc-related-members}
+\Hypertarget{classBankAccount_doc-related-members}
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classBankAccount_aeb54944d0cd240e839ce72a5654cfa78}\index{BankAccount@{BankAccount}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \label{classBankAccount_aeb54944d0cd240e839ce72a5654cfa78} 
+std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os}{, }\item[{const \mbox{\hyperlink{classBankAccount}{Bank\+Account}} \&}]{account}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overloaded \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator to display the account information in a formatted manner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to which the account information will be sent. \\
+\hline
+{\em account} & The \doxylink{classBankAccount}{Bank\+Account} object whose information is to be displayed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the output stream after inserting the account information into it. The account information includes the name, ID, and balance of the account holder. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8cpp}{main.\+cpp}}\end{DoxyCompactItemize}
