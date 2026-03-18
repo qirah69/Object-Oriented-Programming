@@ -15,7 +15,7 @@ private:
    * a pointer to the next node, and a pointer to the previous node.
    * @param The constructor initializes the data to 0 and the next and prev
    * pointers to nullptr.
-   * @return None
+   *
    */
   struct node {
     int data;
@@ -32,16 +32,16 @@ private:
   int size;
   /**
    * @brief Constructs a new deque object.
-   * @param None
-   * @return None
+   *
+   *
    */
 public:
   deque() : head(nullptr), tail(nullptr), size(0) {}
   /**
    * @brief Destroys the deque object and deallocates memory used by the nodes
    * in the linked list.
-   * @param None
-   * @reurn None
+   *
+   *
    */
   ~deque() {
     while (head != nullptr) {
@@ -54,7 +54,7 @@ public:
    * @brief Copy constructor for the deque class. Creates a new deque object
    * that is a copy of an existing deque object.
    * @param other The deque object to be copied.
-   * @return None
+   *
    */
   deque(const deque &other) : head(nullptr), tail(nullptr), size(0) {
     node *current = other.head;
@@ -90,7 +90,7 @@ public:
   /**
    * @brief Pushes an integer value to the head of the deque.
    * @param value The integer value to be added to the head of the deque.
-   * @return void
+   *
    */
   void push_front(int value) {
     node *new_node = new node();
@@ -107,7 +107,7 @@ public:
   /**
    * @brief Pushes an integer value to the tail of the deque.
    * @param value The integer value to be added to the tail of the deque.
-   * @return void
+   *
    */
   void push_back(int value) {
     node *new_node = new node();
@@ -125,8 +125,8 @@ public:
    * @brief Removes the element at the head of the deque. If the deque is empty,
    * it prints a message indicating that the deque is empty and returns without
    * doing anything.
-   * @param None
-   * @return void
+   *
+   *
    */
   void pop_front() {
     if (head == nullptr) {
@@ -147,8 +147,8 @@ public:
    * @brief Removes the element at the tail of the deque. If the deque is empty,
    * it prints a message indicating that the deque is empty and returns without
    * doing anything.
-   * @param None
-   * @return void
+   *
+   *
    */
 
   void pop_back() {
@@ -170,8 +170,8 @@ public:
    * @brief Prints the element at the head of the deque. If the deque is empty,
    * it prints a message indicating that the deque is empty and returns without
    * doing anything.
-   * @param None
-   * @return void
+   *
+   *
    */
 
   void top() {
@@ -185,8 +185,8 @@ public:
    * @brief Prints the element at the tail of the deque. If the deque is empty,
    * it prints a message indicating that the deque is empty and returns without
    * doing anything.
-   * @param None
-   * @return void
+   *
+   *
    */
 
   void back() {
@@ -234,20 +234,28 @@ public:
       if (value == -1) {
         break;
       }
-      cout << "Where to add the value (1. for back and 2. for front): ";
+      cout << "Where to add the value (1. for front and 2. for back): ";
       is >> pos;
       if (pos == 1) {
-        deque.push_back(value);
-      } else if (pos == 2) {
         deque.push_front(value);
+      } else if (pos == 2) {
+        deque.push_back(value);
       } else {
         cout << "Invalid position! Please enter 1 or 2." << endl;
       }
+      cout << "Enter next value (or -1 to stop): ";
     }
     return is;
   }
 };
-
+/**
+ * @brief The main function contains a series of tests to validate the
+ * functionality of the deque class. It tests various operations such as pushing
+ * and popping elements from both ends of the deque, as well as the copy
+ * constructor and assignment operator. The expected output is printed before
+ * each test to help verify the correctness of the implementation.
+ * @return 0 on successful completion of the tests.
+ */
 int main() {
   cout << "=== TEST 1: Empty Deque Operations ===" << endl;
   deque d1;
@@ -321,13 +329,10 @@ int main() {
   cout << "Expected Output: Deque: " << endl;
   cout << "Actual Output: " << d5 << endl;
 
-  /* Uncomment the lines below if you want to test your stream extraction
-  operator! It will pause the automated tests to ask for user input.
-  */
-  // cout << "\n=== TEST 8: Stream Input (Interactive) ===" << endl;
-  // deque d6;
-  // cin >> d6;
-  // cout << "You built: " << d6 << endl;
+  cout << "\n=== TEST 8: Stream Input (Interactive) ===" << endl;
+  deque d6;
+  cin >> d6;
+  cout << "You built: " << d6 << endl;
 
   cout << "\nAll automated tests completed!" << endl;
   return 0;

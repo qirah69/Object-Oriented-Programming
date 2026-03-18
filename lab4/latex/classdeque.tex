@@ -1,0 +1,161 @@
+\doxysection{deque Class Reference}
+\hypertarget{classdeque}{}\label{classdeque}\index{deque@{deque}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classdeque_a90047ab118a1570d8bd62d9e83974711}\label{classdeque_a90047ab118a1570d8bd62d9e83974711} 
+{\bfseries deque} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new deque object. \end{DoxyCompactList}\item 
+\Hypertarget{classdeque_a687f47262e5a9b5d2da92a5acd26a51c}\label{classdeque_a687f47262e5a9b5d2da92a5acd26a51c} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}deque} ()
+\begin{DoxyCompactList}\small\item\em Destroys the deque object and deallocates memory used by the nodes in the linked list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdeque_ace54f51df8bfdd511f86e63ac443e3e9}{deque}} (const \mbox{\hyperlink{classdeque}{deque}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor for the deque class. Creates a new deque object that is a copy of an existing deque object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdeque}{deque}} \& \mbox{\hyperlink{classdeque_ad2d73864568cbc91d40977103e288e75}{operator=}} (const \mbox{\hyperlink{classdeque}{deque}} \&other)
+\begin{DoxyCompactList}\small\item\em Assignment operator for the deque class. Assigns the contents of one deque object to another deque object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdeque_a132d90563dcfd75dd7ade20023c814aa}{push\+\_\+front}} (int value)
+\begin{DoxyCompactList}\small\item\em Pushes an integer value to the head of the deque. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdeque_a3508e6ea8359d8a91a21201bb9b33f9f}{push\+\_\+back}} (int value)
+\begin{DoxyCompactList}\small\item\em Pushes an integer value to the tail of the deque. \end{DoxyCompactList}\item 
+\Hypertarget{classdeque_ad393039879d40e1b7e0eb126144d290e}\label{classdeque_ad393039879d40e1b7e0eb126144d290e} 
+void {\bfseries pop\+\_\+front} ()
+\begin{DoxyCompactList}\small\item\em Removes the element at the head of the deque. If the deque is empty, it prints a message indicating that the deque is empty and returns without doing anything. \end{DoxyCompactList}\item 
+\Hypertarget{classdeque_a477e24f9018c047ece4c568fb70f86b3}\label{classdeque_a477e24f9018c047ece4c568fb70f86b3} 
+void {\bfseries pop\+\_\+back} ()
+\begin{DoxyCompactList}\small\item\em Removes the element at the tail of the deque. If the deque is empty, it prints a message indicating that the deque is empty and returns without doing anything. \end{DoxyCompactList}\item 
+\Hypertarget{classdeque_a5832b7301beca3b5c169354920b2c105}\label{classdeque_a5832b7301beca3b5c169354920b2c105} 
+void {\bfseries top} ()
+\begin{DoxyCompactList}\small\item\em Prints the element at the head of the deque. If the deque is empty, it prints a message indicating that the deque is empty and returns without doing anything. \end{DoxyCompactList}\item 
+\Hypertarget{classdeque_a951fd71fe6dbf22ce52a8a9d68903d66}\label{classdeque_a951fd71fe6dbf22ce52a8a9d68903d66} 
+void {\bfseries back} ()
+\begin{DoxyCompactList}\small\item\em Prints the element at the tail of the deque. If the deque is empty, it prints a message indicating that the deque is empty and returns without doing anything. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{classdeque_a3670184927aeacb83053cbef5712af6b}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{classdeque}{deque}} \&\mbox{\hyperlink{classdeque}{deque}})
+\begin{DoxyCompactList}\small\item\em Returns the elements in the deque. \end{DoxyCompactList}\item 
+istream \& \mbox{\hyperlink{classdeque_aa8b525c69412ff91c7cf9487ff40074d}{operator$>$$>$}} (istream \&is, \mbox{\hyperlink{classdeque}{deque}} \&\mbox{\hyperlink{classdeque}{deque}})
+\begin{DoxyCompactList}\small\item\em Reads integer values from the input stream and adds them to the deque. The user is prompted to enter values until they enter -\/1 to stop. For each value entered, the user is also prompted to specify whether to add the value to the front or back of the deque. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{classdeque_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classdeque_ace54f51df8bfdd511f86e63ac443e3e9}\index{deque@{deque}!deque@{deque}}
+\index{deque@{deque}!deque@{deque}}
+\doxysubsubsection{\texorpdfstring{deque()}{deque()}}
+{\footnotesize\ttfamily \label{classdeque_ace54f51df8bfdd511f86e63ac443e3e9} 
+deque\+::deque (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdeque}{deque}} \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor for the deque class. Creates a new deque object that is a copy of an existing deque object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The deque object to be copied. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classdeque_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classdeque_ad2d73864568cbc91d40977103e288e75}\index{deque@{deque}!operator=@{operator=}}
+\index{operator=@{operator=}!deque@{deque}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{classdeque_ad2d73864568cbc91d40977103e288e75} 
+\mbox{\hyperlink{classdeque}{deque}} \& deque\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdeque}{deque}} \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Assignment operator for the deque class. Assigns the contents of one deque object to another deque object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The deque object to be assigned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the assigned deque object. 
+\end{DoxyReturn}
+\Hypertarget{classdeque_a3508e6ea8359d8a91a21201bb9b33f9f}\index{deque@{deque}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!deque@{deque}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily \label{classdeque_a3508e6ea8359d8a91a21201bb9b33f9f} 
+void deque\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{int}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pushes an integer value to the tail of the deque. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The integer value to be added to the tail of the deque. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classdeque_a132d90563dcfd75dd7ade20023c814aa}\index{deque@{deque}!push\_front@{push\_front}}
+\index{push\_front@{push\_front}!deque@{deque}}
+\doxysubsubsection{\texorpdfstring{push\_front()}{push\_front()}}
+{\footnotesize\ttfamily \label{classdeque_a132d90563dcfd75dd7ade20023c814aa} 
+void deque\+::push\+\_\+front (\begin{DoxyParamCaption}\item[{int}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pushes an integer value to the head of the deque. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The integer value to be added to the head of the deque. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-related-members}
+\Hypertarget{classdeque_doc-related-members}
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classdeque_a3670184927aeacb83053cbef5712af6b}\index{deque@{deque}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!deque@{deque}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \label{classdeque_a3670184927aeacb83053cbef5712af6b} 
+ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os}{, }\item[{const \mbox{\hyperlink{classdeque}{deque}} \&}]{deque}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Returns the elements in the deque. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to which the elements of the deque will be written. \\
+\hline
+{\em deque} & The deque object whose elements will be written to the output stream. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An output stream containing the elements in the deque. 
+\end{DoxyReturn}
+\Hypertarget{classdeque_aa8b525c69412ff91c7cf9487ff40074d}\index{deque@{deque}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!deque@{deque}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily \label{classdeque_aa8b525c69412ff91c7cf9487ff40074d} 
+istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{is}{, }\item[{\mbox{\hyperlink{classdeque}{deque}} \&}]{deque}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Reads integer values from the input stream and adds them to the deque. The user is prompted to enter values until they enter -\/1 to stop. For each value entered, the user is also prompted to specify whether to add the value to the front or back of the deque. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & The input stream from which to read the values. \\
+\hline
+{\em deque} & The deque object to which the values will be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An input stream containing the values read from the user and added to the deque. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8cpp}{main.\+cpp}}\end{DoxyCompactItemize}
