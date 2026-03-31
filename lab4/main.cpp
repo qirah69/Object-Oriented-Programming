@@ -15,7 +15,6 @@ private:
    * a pointer to the next node, and a pointer to the previous node.
    * @param The constructor initializes the data to 0 and the next and prev
    * pointers to nullptr.
-   *
    */
   struct node {
     int data;
@@ -32,16 +31,12 @@ private:
   int size;
   /**
    * @brief Constructs a new deque object.
-   *
-   *
    */
 public:
   deque() : head(nullptr), tail(nullptr), size(0) {}
   /**
    * @brief Destroys the deque object and deallocates memory used by the nodes
    * in the linked list.
-   *
-   *
    */
   ~deque() {
     while (head != nullptr) {
@@ -54,7 +49,6 @@ public:
    * @brief Copy constructor for the deque class. Creates a new deque object
    * that is a copy of an existing deque object.
    * @param other The deque object to be copied.
-   *
    */
   deque(const deque &other) : head(nullptr), tail(nullptr), size(0) {
     node *current = other.head;
@@ -90,7 +84,6 @@ public:
   /**
    * @brief Pushes an integer value to the head of the deque.
    * @param value The integer value to be added to the head of the deque.
-   *
    */
   void push_front(int value) {
     node *new_node = new node();
@@ -107,7 +100,6 @@ public:
   /**
    * @brief Pushes an integer value to the tail of the deque.
    * @param value The integer value to be added to the tail of the deque.
-   *
    */
   void push_back(int value) {
     node *new_node = new node();
@@ -125,8 +117,6 @@ public:
    * @brief Removes the element at the head of the deque. If the deque is empty,
    * it prints a message indicating that the deque is empty and returns without
    * doing anything.
-   *
-   *
    */
   void pop_front() {
     if (head == nullptr) {
@@ -147,8 +137,6 @@ public:
    * @brief Removes the element at the tail of the deque. If the deque is empty,
    * it prints a message indicating that the deque is empty and returns without
    * doing anything.
-   *
-   *
    */
 
   void pop_back() {
@@ -170,8 +158,6 @@ public:
    * @brief Prints the element at the head of the deque. If the deque is empty,
    * it prints a message indicating that the deque is empty and returns without
    * doing anything.
-   *
-   *
    */
 
   void top() {
@@ -185,8 +171,6 @@ public:
    * @brief Prints the element at the tail of the deque. If the deque is empty,
    * it prints a message indicating that the deque is empty and returns without
    * doing anything.
-   *
-   *
    */
 
   void back() {
@@ -197,7 +181,9 @@ public:
     cout << "Tail: " << tail->data << endl;
   }
   /**
-   * @brief Returns the elements in the deque.
+   * @brief Overloads the output stream operator to print the elements of the
+   * deque in order from head to tail. If the deque is empty, it will simply
+   * print "Deque: " with no elements following it.
    * @param os The output stream to which the elements of the deque will be
    * written.
    * @param deque The deque object whose elements will be written to the output

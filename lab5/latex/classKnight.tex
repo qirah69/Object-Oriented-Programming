@@ -1,0 +1,103 @@
+\doxysection{Knight Class Reference}
+\hypertarget{classKnight}{}\label{classKnight}\index{Knight@{Knight}}
+
+
+The \doxylink{classKnight}{Knight} class represents a character that has armor and can deal damage with a sword.  
+
+
+
+
+{\ttfamily \#include $<$knight.\+h$>$}
+
+Inheritance diagram for Knight\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classKnight}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKnight_af7b6a7019a346fea2e7094104b778bfe}{Knight}} (std\+::string name, int health, int level, float input\+Armor, int sword\+Damage)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{classKnight}{Knight} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKnight_a8d1b959c006c72f57b00e6988dae7440}{take\+Damage}} (int damage)
+\begin{DoxyCompactList}\small\item\em Method to calculate the damage taken by the knight character after applying armor reduction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCharacter}{Character}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCharacter_a512dedc695389d3b522363970e56005b}{Character}} (std\+::string name, int health, int level)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classCharacter}{Character} object with the given name, health, and level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_a629a962981bf6aaeb6fff5c78eb60158}{set\+Name}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_a53c967ac7d9cc4d04773b46df7571eb4}{set\+Health}} (unsigned int health)
+\begin{DoxyCompactList}\small\item\em Sets the health points of the character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_a3efbee7af508f5603a560640287fa368}{set\+Level}} (unsigned int level)
+\begin{DoxyCompactList}\small\item\em Sets the level of the character. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCharacter_aec5f06c80515bb29947563a593b8c404}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the name of the character. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCharacter_ae24a44b8a22d0727dd4e2c46a1df66f5}{get\+Health}} ()
+\begin{DoxyCompactList}\small\item\em Gets the health points of the character. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCharacter_ade8602e9521fc4c1849d1d1026bc0399}{get\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Gets the level of the character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classKnight}{Knight} class represents a character that has armor and can deal damage with a sword. 
+
+
+\begin{DoxyItemize}
+\item The \doxylink{classKnight}{Knight} class inherits from the \doxylink{classCharacter}{Character} class and adds additional attributes and methods specific to a knight character. 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\Hypertarget{classKnight_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classKnight_af7b6a7019a346fea2e7094104b778bfe}\index{Knight@{Knight}!Knight@{Knight}}
+\index{Knight@{Knight}!Knight@{Knight}}
+\doxysubsubsection{\texorpdfstring{Knight()}{Knight()}}
+{\footnotesize\ttfamily \label{classKnight_af7b6a7019a346fea2e7094104b778bfe} 
+Knight\+::\+Knight (\begin{DoxyParamCaption}\item[{std\+::string}]{name}{, }\item[{int}]{health}{, }\item[{int}]{level}{, }\item[{float}]{input\+Armor}{, }\item[{int}]{sword\+Damage}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{classKnight}{Knight} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the knight character. \\
+\hline
+{\em health} & The health points of the knight character. \\
+\hline
+{\em level} & The level of the knight character. \\
+\hline
+{\em input\+Armor} & The armor value that reduces incoming damage for the knight character. \\
+\hline
+{\em sword\+Damage} & The damage value that the knight can deal with a sword. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classKnight_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classKnight_a8d1b959c006c72f57b00e6988dae7440}\index{Knight@{Knight}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!Knight@{Knight}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}}
+{\footnotesize\ttfamily \label{classKnight_a8d1b959c006c72f57b00e6988dae7440} 
+void Knight\+::take\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage}{}\end{DoxyParamCaption})}
+
+
+
+Method to calculate the damage taken by the knight character after applying armor reduction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & The initial damage value before applying armor reduction. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{knight_8h}{knight.\+h}}\item 
+knight.\+cpp\end{DoxyCompactItemize}

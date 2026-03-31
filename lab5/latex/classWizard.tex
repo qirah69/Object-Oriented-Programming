@@ -1,0 +1,118 @@
+\doxysection{Wizard Class Reference}
+\hypertarget{classWizard}{}\label{classWizard}\index{Wizard@{Wizard}}
+
+
+The \doxylink{classWizard}{Wizard} class represents a magical character with the ability to cast spells. It inherits from the \doxylink{classCharacter}{Character} class and adds attributes and methods specific to a wizard, such as mana, spell power, and a list of known spells.  
+
+
+
+
+{\ttfamily \#include $<$wizard.\+h$>$}
+
+Inheritance diagram for Wizard\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classWizard}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWizard_a9872960f8e1b29c944f8cd03fecfca0d}{Wizard}} (std\+::string name, int health, int level, int mana, int spell\+Power)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classWizard}{Wizard} object with the specified name, health, level, mana, and spell power. The constructor initializes the wizard\textquotesingle{}s attributes and prepares it for use in the game. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWizard_a59d61e7ad2eb27fa2f24dd892424db2d}{cast\+Spell}} (const std\+::string \&spell)
+\begin{DoxyCompactList}\small\item\em Casts a spell if the wizard knows it and has enough mana. This method checks if the specified spell is in the wizard\textquotesingle{}s list of known spells and if the wizard has sufficient mana to cast it. If both conditions are met, the spell is cast successfully, and the method returns true. Otherwise, it returns false, indicating that the spell could not be cast due to either lack of knowledge or insufficient mana. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWizard_a8d856e545a7a2093542508a04e8caf8f}{add\+Spell}} (const std\+::string \&spell)
+\begin{DoxyCompactList}\small\item\em Adds a new spell to the wizard\textquotesingle{}s list of known spells. This method allows the wizard to learn new spells by adding the specified spell name to the wizard\textquotesingle{}s collection of known spells. Once a spell is added, the wizard can attempt to cast it using the cast\+Spell method, provided they have enough mana. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCharacter}{Character}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCharacter_a512dedc695389d3b522363970e56005b}{Character}} (std\+::string name, int health, int level)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classCharacter}{Character} object with the given name, health, and level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_a629a962981bf6aaeb6fff5c78eb60158}{set\+Name}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_a53c967ac7d9cc4d04773b46df7571eb4}{set\+Health}} (unsigned int health)
+\begin{DoxyCompactList}\small\item\em Sets the health points of the character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_a3efbee7af508f5603a560640287fa368}{set\+Level}} (unsigned int level)
+\begin{DoxyCompactList}\small\item\em Sets the level of the character. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCharacter_aec5f06c80515bb29947563a593b8c404}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the name of the character. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCharacter_ae24a44b8a22d0727dd4e2c46a1df66f5}{get\+Health}} ()
+\begin{DoxyCompactList}\small\item\em Gets the health points of the character. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCharacter_ade8602e9521fc4c1849d1d1026bc0399}{get\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Gets the level of the character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classWizard}{Wizard} class represents a magical character with the ability to cast spells. It inherits from the \doxylink{classCharacter}{Character} class and adds attributes and methods specific to a wizard, such as mana, spell power, and a list of known spells. 
+
+\label{doc-constructors}
+\Hypertarget{classWizard_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classWizard_a9872960f8e1b29c944f8cd03fecfca0d}\index{Wizard@{Wizard}!Wizard@{Wizard}}
+\index{Wizard@{Wizard}!Wizard@{Wizard}}
+\doxysubsubsection{\texorpdfstring{Wizard()}{Wizard()}}
+{\footnotesize\ttfamily \label{classWizard_a9872960f8e1b29c944f8cd03fecfca0d} 
+Wizard\+::\+Wizard (\begin{DoxyParamCaption}\item[{std\+::string}]{name}{, }\item[{int}]{health}{, }\item[{int}]{level}{, }\item[{int}]{mana}{, }\item[{int}]{spell\+Power}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classWizard}{Wizard} object with the specified name, health, level, mana, and spell power. The constructor initializes the wizard\textquotesingle{}s attributes and prepares it for use in the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the wizard, which is passed to the base \doxylink{classCharacter}{Character} class constructor \\
+\hline
+{\em health} & The health points of the wizard, which is passed to the base \doxylink{classCharacter}{Character} class constructor \\
+\hline
+{\em level} & The level of the wizard, which is passed to the base \doxylink{classCharacter}{Character} class constructor \\
+\hline
+{\em mana} & The amount of magical energy the wizard has, which is specific to the \doxylink{classWizard}{Wizard} class \\
+\hline
+{\em spell\+Power} & The strength of the wizard\textquotesingle{}s spells, which is specific to the \doxylink{classWizard}{Wizard} class \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classWizard_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classWizard_a8d856e545a7a2093542508a04e8caf8f}\index{Wizard@{Wizard}!addSpell@{addSpell}}
+\index{addSpell@{addSpell}!Wizard@{Wizard}}
+\doxysubsubsection{\texorpdfstring{addSpell()}{addSpell()}}
+{\footnotesize\ttfamily \label{classWizard_a8d856e545a7a2093542508a04e8caf8f} 
+void Wizard\+::add\+Spell (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{spell}{}\end{DoxyParamCaption})}
+
+
+
+Adds a new spell to the wizard\textquotesingle{}s list of known spells. This method allows the wizard to learn new spells by adding the specified spell name to the wizard\textquotesingle{}s collection of known spells. Once a spell is added, the wizard can attempt to cast it using the cast\+Spell method, provided they have enough mana. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spell} & The name of the spell to be added to the wizard\textquotesingle{}s list of known \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classWizard_a59d61e7ad2eb27fa2f24dd892424db2d}\index{Wizard@{Wizard}!castSpell@{castSpell}}
+\index{castSpell@{castSpell}!Wizard@{Wizard}}
+\doxysubsubsection{\texorpdfstring{castSpell()}{castSpell()}}
+{\footnotesize\ttfamily \label{classWizard_a59d61e7ad2eb27fa2f24dd892424db2d} 
+bool Wizard\+::cast\+Spell (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{spell}{}\end{DoxyParamCaption})}
+
+
+
+Casts a spell if the wizard knows it and has enough mana. This method checks if the specified spell is in the wizard\textquotesingle{}s list of known spells and if the wizard has sufficient mana to cast it. If both conditions are met, the spell is cast successfully, and the method returns true. Otherwise, it returns false, indicating that the spell could not be cast due to either lack of knowledge or insufficient mana. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spell} & The name of the spell to be cast, which is checked against the wizard \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the spell is successfully cast, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{wizard_8h}{wizard.\+h}}\item 
+wizard.\+cpp\end{DoxyCompactItemize}

@@ -81,7 +81,7 @@ public:
 };
 
 std::ostream &operator<<(std::ostream &os, const BankAccount &account) {
-  os << "Name: " << account.name << ", ID: " << account.id << ", Balance: $"
+  os << "Name: " << account.name << "\nID: " << account.id << "\nBalance: $"
      << account.balance;
   return os;
 }

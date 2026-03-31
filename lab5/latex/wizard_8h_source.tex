@@ -1,0 +1,33 @@
+\doxysection{wizard.\+h}
+\hypertarget{wizard_8h_source}{}\label{wizard_8h_source}\mbox{\hyperlink{wizard_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{character_8h}{character.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classWizard_a9872960f8e1b29c944f8cd03fecfca0d}{Wizard}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classCharacter_a512dedc695389d3b522363970e56005b}{Character}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \textcolor{keywordtype}{int}\ mana;\ }
+\DoxyCodeLine{00024\ \ \ std::vector<std::string>}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ spells;\ }
+\DoxyCodeLine{00027\ \ \ \textcolor{keywordtype}{int}\ spellPower;\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordtype}{bool}\ knowSpell(}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \&spell);\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \mbox{\hyperlink{classWizard_a9872960f8e1b29c944f8cd03fecfca0d}{Wizard}}(std::string\ name,\ \textcolor{keywordtype}{int}\ health,\ \textcolor{keywordtype}{int}\ level,\ \textcolor{keywordtype}{int}\ mana,\ \textcolor{keywordtype}{int}\ spellPower);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classWizard_a59d61e7ad2eb27fa2f24dd892424db2d}{castSpell}}(\textcolor{keyword}{const}\ std::string\ \&spell);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWizard_a8d856e545a7a2093542508a04e8caf8f}{addSpell}}(\textcolor{keyword}{const}\ std::string\ \&spell);}
+\DoxyCodeLine{00081\ \};}
+
+\end{DoxyCode}
