@@ -1,0 +1,7 @@
+<map id="FSComponent" name="FSComponent">
+<area shape="rect" id="Node000001" title="An abstract base class representing a generic component in the file system." alt="" coords="48,5,186,145"/>
+<area shape="rect" id="Node000002" href="$classFile.html" title="A concrete class representing an individual file in the file system." alt="" coords="5,204,93,343"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,160,75,205,70,203,86,158"/>
+<area shape="rect" id="Node000003" href="$classFolder.html" title="A composite class representing a directory in the file system." alt="" coords="117,193,253,354"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="148,158,160,192,155,194,143,159"/>
+</map>

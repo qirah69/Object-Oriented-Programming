@@ -1,0 +1,147 @@
+\doxysection{Folder Class Reference}
+\hypertarget{classFolder}{}\label{classFolder}\index{Folder@{Folder}}
+
+
+A composite class representing a directory in the file system.  
+
+
+
+
+{\ttfamily \#include $<$Folder.\+h$>$}
+
+
+
+Inheritance diagram for Folder\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classFolder__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Folder\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classFolder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFolder_a24e9aa11ca4c204a9a81cbd0468c98db}{Folder}} (const std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classFolder}{Folder} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFolder_a17c82a787343425e5b2cbcb184f924a8}{\texorpdfstring{$\sim$}{\string~}\+Folder}} () override
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{classFolder}{Folder} object and cleans up memory. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFolder_a82f4c955acd14cd4c135ed12002ba99c}{get\+Size}} () const override
+\begin{DoxyCompactList}\small\item\em Calculates the total size of the folder. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFolder_ad7ae7d54616634750bd454966d9b192c}{display}} () override
+\begin{DoxyCompactList}\small\item\em Displays the folder\textquotesingle{}s details and recursively displays its contents. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFolder_a9601be5e386c9a67f3e32ff9dc5ae61a}{add\+Component}} (\mbox{\hyperlink{classFSComponent}{FSComponent}} \texorpdfstring{$\ast$}{*}c)
+\begin{DoxyCompactList}\small\item\em Adds a new component (\doxylink{classFile}{File} or sub-\/\+Folder) to this folder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classFSComponent}{FSComponent}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFSComponent_a169e6d8e287d8b77ca4ef2627c85b3ab}{FSComponent}} (const std\+::string \&\mbox{\hyperlink{classFSComponent_abf7f505f99e9f3eebf56c20e2effeb1a}{name}})
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classFSComponent}{FSComponent} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classFSComponent_a443903fc0e92ba36714731a79ecbbfc9}{\texorpdfstring{$\sim$}{\string~}\+FSComponent}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classFSComponent}{FSComponent}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classFSComponent_abf7f505f99e9f3eebf56c20e2effeb1a}{name}}
+\begin{DoxyCompactList}\small\item\em The name or path of the file system component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A composite class representing a directory in the file system. 
+
+The \doxylink{classFolder}{Folder} class inherits from \doxylink{classFSComponent}{FSComponent} and acts as a composite object. It can contain multiple \doxylink{classFSComponent}{FSComponent} objects, allowing it to store both Files and other sub-\/\+Folders. It is also responsible for managing and freeing the memory of the components it owns. 
+
+\label{doc-constructors}
+\Hypertarget{classFolder_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classFolder_a24e9aa11ca4c204a9a81cbd0468c98db}\index{Folder@{Folder}!Folder@{Folder}}
+\index{Folder@{Folder}!Folder@{Folder}}
+\doxysubsubsection{\texorpdfstring{Folder()}{Folder()}}
+{\footnotesize\ttfamily \label{classFolder_a24e9aa11ca4c204a9a81cbd0468c98db} 
+Folder\+::\+Folder (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classFolder}{Folder} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The name of the folder. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classFolder_a17c82a787343425e5b2cbcb184f924a8}\index{Folder@{Folder}!````~Folder@{\texorpdfstring{$\sim$}{\string~}Folder}}
+\index{````~Folder@{\texorpdfstring{$\sim$}{\string~}Folder}!Folder@{Folder}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Folder()}{\string~Folder()}}
+{\footnotesize\ttfamily \label{classFolder_a17c82a787343425e5b2cbcb184f924a8} 
+Folder\+::\texorpdfstring{$\sim$}{\string~}\+Folder (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Destroys the \doxylink{classFolder}{Folder} object and cleans up memory. 
+
+Iterates through the components vector and safely deletes all dynamically allocated \doxylink{classFSComponent}{FSComponent} objects contained within to prevent memory leaks. 
+
+\label{doc-func-members}
+\Hypertarget{classFolder_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classFolder_a9601be5e386c9a67f3e32ff9dc5ae61a}\index{Folder@{Folder}!addComponent@{addComponent}}
+\index{addComponent@{addComponent}!Folder@{Folder}}
+\doxysubsubsection{\texorpdfstring{addComponent()}{addComponent()}}
+{\footnotesize\ttfamily \label{classFolder_a9601be5e386c9a67f3e32ff9dc5ae61a} 
+void Folder\+::add\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFSComponent}{FSComponent}} \texorpdfstring{$\ast$}{*}}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Adds a new component (\doxylink{classFile}{File} or sub-\/\+Folder) to this folder. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & A pointer to the dynamically allocated \doxylink{classFSComponent}{FSComponent} to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classFolder_ad7ae7d54616634750bd454966d9b192c}\index{Folder@{Folder}!display@{display}}
+\index{display@{display}!Folder@{Folder}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily \label{classFolder_ad7ae7d54616634750bd454966d9b192c} 
+void Folder\+::display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Displays the folder\textquotesingle{}s details and recursively displays its contents. 
+
+Prints the folder\textquotesingle{}s name and total size, then calls the \doxylink{classFolder_ad7ae7d54616634750bd454966d9b192c}{display()} method on every component stored inside it. 
+
+Implements \mbox{\hyperlink{classFSComponent_a869763c69baa8e8d0ab9b2021693bc6b}{FSComponent}}.
+
+\Hypertarget{classFolder_a82f4c955acd14cd4c135ed12002ba99c}\index{Folder@{Folder}!getSize@{getSize}}
+\index{getSize@{getSize}!Folder@{Folder}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \label{classFolder_a82f4c955acd14cd4c135ed12002ba99c} 
+int Folder\+::get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculates the total size of the folder. 
+
+Recursively queries the sizes of all contained files and subfolders and sums them up. \begin{DoxyReturn}{Returns}
+int The total size of all contents in the folder. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classFSComponent_a3709cbee706ac74233ff240bcfd7047a}{FSComponent}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Folder_8h}{Folder.\+h}}\item 
+Folder.\+cpp\end{DoxyCompactItemize}

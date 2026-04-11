@@ -1,0 +1,137 @@
+\doxysection{File Class Reference}
+\hypertarget{classFile}{}\label{classFile}\index{File@{File}}
+
+
+A concrete class representing an individual file in the file system.  
+
+
+
+
+{\ttfamily \#include $<$File.\+h$>$}
+
+
+
+Inheritance diagram for File\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classFile__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for File\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classFile__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFile_a36ab97be46c6e9a85c947663f5156665}{File}} (const std\+::string \&\mbox{\hyperlink{classFSComponent_abf7f505f99e9f3eebf56c20e2effeb1a}{name}}, int size, \mbox{\hyperlink{fileType_8h_ab7a20842fb4918fc04269c5107ee3a17}{file\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classFile}{File} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFile_a5fbd1786f4344afd3e990b158a0d03a0}{get\+Size}} () const override
+\begin{DoxyCompactList}\small\item\em Retrieves the size of this specific file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFile_a861cab0f71af7a9e4b8038f42275662c}{display}} () override
+\begin{DoxyCompactList}\small\item\em Displays the file\textquotesingle{}s details. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{fileType_8h_ab7a20842fb4918fc04269c5107ee3a17}{file\+Type}} \mbox{\hyperlink{classFile_ae6a3b47b3e334c41b2c64a6f16800043}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the specific type of the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classFSComponent}{FSComponent}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFSComponent_a169e6d8e287d8b77ca4ef2627c85b3ab}{FSComponent}} (const std\+::string \&\mbox{\hyperlink{classFSComponent_abf7f505f99e9f3eebf56c20e2effeb1a}{name}})
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classFSComponent}{FSComponent} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classFSComponent_a443903fc0e92ba36714731a79ecbbfc9}{\texorpdfstring{$\sim$}{\string~}\+FSComponent}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classFSComponent}{FSComponent}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classFSComponent_abf7f505f99e9f3eebf56c20e2effeb1a}{name}}
+\begin{DoxyCompactList}\small\item\em The name or path of the file system component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A concrete class representing an individual file in the file system. 
+
+The \doxylink{classFile}{File} class inherits from \doxylink{classFSComponent}{FSComponent} and acts as a "{}leaf"{} node in the composite pattern. Unlike a \doxylink{classFolder}{Folder}, a \doxylink{classFile}{File} cannot contain other components. It stores its own specific size and file type. 
+
+\label{doc-constructors}
+\Hypertarget{classFile_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classFile_a36ab97be46c6e9a85c947663f5156665}\index{File@{File}!File@{File}}
+\index{File@{File}!File@{File}}
+\doxysubsubsection{\texorpdfstring{File()}{File()}}
+{\footnotesize\ttfamily \label{classFile_a36ab97be46c6e9a85c947663f5156665} 
+File\+::\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{int}]{size}{, }\item[{\mbox{\hyperlink{fileType_8h_ab7a20842fb4918fc04269c5107ee3a17}{file\+Type}}}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classFile}{File} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the file (passed up to the \doxylink{classFSComponent}{FSComponent} base class). \\
+\hline
+{\em size} & The size of the file. \\
+\hline
+{\em type} & The type of the file, based on the \doxylink{fileType_8h_ab7a20842fb4918fc04269c5107ee3a17}{file\+Type} enumeration. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classFile_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classFile_a861cab0f71af7a9e4b8038f42275662c}\index{File@{File}!display@{display}}
+\index{display@{display}!File@{File}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily \label{classFile_a861cab0f71af7a9e4b8038f42275662c} 
+void File\+::display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Displays the file\textquotesingle{}s details. 
+
+Prints the file\textquotesingle{}s name, size, and type to the standard output. 
+
+Implements \mbox{\hyperlink{classFSComponent_a869763c69baa8e8d0ab9b2021693bc6b}{FSComponent}}.
+
+\Hypertarget{classFile_a5fbd1786f4344afd3e990b158a0d03a0}\index{File@{File}!getSize@{getSize}}
+\index{getSize@{getSize}!File@{File}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \label{classFile_a5fbd1786f4344afd3e990b158a0d03a0} 
+int File\+::get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves the size of this specific file. 
+
+\begin{DoxyReturn}{Returns}
+int The size attribute of the file. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classFSComponent_a3709cbee706ac74233ff240bcfd7047a}{FSComponent}}.
+
+\Hypertarget{classFile_ae6a3b47b3e334c41b2c64a6f16800043}\index{File@{File}!getType@{getType}}
+\index{getType@{getType}!File@{File}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{classFile_ae6a3b47b3e334c41b2c64a6f16800043} 
+\mbox{\hyperlink{fileType_8h_ab7a20842fb4918fc04269c5107ee3a17}{file\+Type}} File\+::get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the specific type of the file. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{fileType_8h_ab7a20842fb4918fc04269c5107ee3a17}{file\+Type} The enumeration value representing this file\textquotesingle{}s type. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{File_8h}{File.\+h}}\item 
+File.\+cpp\end{DoxyCompactItemize}

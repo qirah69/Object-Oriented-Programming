@@ -1,0 +1,142 @@
+\doxysection{FSComponent Class Reference}
+\hypertarget{classFSComponent}{}\label{classFSComponent}\index{FSComponent@{FSComponent}}
+
+
+An abstract base class representing a generic component in the file system.  
+
+
+
+
+{\ttfamily \#include $<$FSComponent.\+h$>$}
+
+
+
+Inheritance diagram for FSComponent\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{classFSComponent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for FSComponent\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classFSComponent__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFSComponent_a169e6d8e287d8b77ca4ef2627c85b3ab}{FSComponent}} (const std\+::string \&\mbox{\hyperlink{classFSComponent_abf7f505f99e9f3eebf56c20e2effeb1a}{name}})
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classFSComponent}{FSComponent} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classFSComponent_a443903fc0e92ba36714731a79ecbbfc9}{\texorpdfstring{$\sim$}{\string~}\+FSComponent}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classFSComponent_a3709cbee706ac74233ff240bcfd7047a}{get\+Size}} () const =0
+\begin{DoxyCompactList}\small\item\em Retrieves the size of the component. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classFSComponent_a869763c69baa8e8d0ab9b2021693bc6b}{display}} ()=0
+\begin{DoxyCompactList}\small\item\em Displays the component\textquotesingle{}s details. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classFSComponent_abf7f505f99e9f3eebf56c20e2effeb1a}{name}}
+\begin{DoxyCompactList}\small\item\em The name or path of the file system component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An abstract base class representing a generic component in the file system. 
+
+This class serves as the foundation for the Composite design pattern. Both \doxylink{classFile}{File} (leaf) and \doxylink{classFolder}{Folder} (composite) classes inherit from this base class, allowing them to be treated uniformly through polymorphism. 
+
+\label{doc-constructors}
+\Hypertarget{classFSComponent_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classFSComponent_a169e6d8e287d8b77ca4ef2627c85b3ab}\index{FSComponent@{FSComponent}!FSComponent@{FSComponent}}
+\index{FSComponent@{FSComponent}!FSComponent@{FSComponent}}
+\doxysubsubsection{\texorpdfstring{FSComponent()}{FSComponent()}}
+{\footnotesize\ttfamily \label{classFSComponent_a169e6d8e287d8b77ca4ef2627c85b3ab} 
+FSComponent\+::\+FSComponent (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a new \doxylink{classFSComponent}{FSComponent} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name to be assigned to the component. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classFSComponent_a443903fc0e92ba36714731a79ecbbfc9}\index{FSComponent@{FSComponent}!````~FSComponent@{\texorpdfstring{$\sim$}{\string~}FSComponent}}
+\index{````~FSComponent@{\texorpdfstring{$\sim$}{\string~}FSComponent}!FSComponent@{FSComponent}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FSComponent()}{\string~FSComponent()}}
+{\footnotesize\ttfamily \label{classFSComponent_a443903fc0e92ba36714731a79ecbbfc9} 
+virtual FSComponent\+::\texorpdfstring{$\sim$}{\string~}\+FSComponent (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor. 
+
+A virtual destructor is mandatory for abstract base classes to ensure that when a derived object is deleted via a base class pointer, the derived class\textquotesingle{}s destructor is properly invoked. 
+
+\label{doc-func-members}
+\Hypertarget{classFSComponent_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classFSComponent_a869763c69baa8e8d0ab9b2021693bc6b}\index{FSComponent@{FSComponent}!display@{display}}
+\index{display@{display}!FSComponent@{FSComponent}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily \label{classFSComponent_a869763c69baa8e8d0ab9b2021693bc6b} 
+virtual void FSComponent\+::display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Displays the component\textquotesingle{}s details. 
+
+This is a pure virtual function. Derived classes will implement this to print their specific information (e.\+g., file details or folder hierarchy). 
+
+Implemented in \mbox{\hyperlink{classFile_a861cab0f71af7a9e4b8038f42275662c}{File}}, and \mbox{\hyperlink{classFolder_ad7ae7d54616634750bd454966d9b192c}{Folder}}.
+
+\Hypertarget{classFSComponent_a3709cbee706ac74233ff240bcfd7047a}\index{FSComponent@{FSComponent}!getSize@{getSize}}
+\index{getSize@{getSize}!FSComponent@{FSComponent}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \label{classFSComponent_a3709cbee706ac74233ff240bcfd7047a} 
+virtual int FSComponent\+::get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retrieves the size of the component. 
+
+
+\begin{DoxyItemize}
+\item This is a pure virtual function, meaning every derived class must provide its own implementation. \begin{DoxyReturn}{Returns}
+int The size of the component in bytes. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Implemented in \mbox{\hyperlink{classFile_a5fbd1786f4344afd3e990b158a0d03a0}{File}}, and \mbox{\hyperlink{classFolder_a82f4c955acd14cd4c135ed12002ba99c}{Folder}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classFSComponent_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classFSComponent_abf7f505f99e9f3eebf56c20e2effeb1a}\index{FSComponent@{FSComponent}!name@{name}}
+\index{name@{name}!FSComponent@{FSComponent}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \label{classFSComponent_abf7f505f99e9f3eebf56c20e2effeb1a} 
+std\+::string FSComponent\+::name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The name or path of the file system component. 
+
+
+\begin{DoxyItemize}
+\item Marked as protected so derived classes (\doxylink{classFile}{File}, \doxylink{classFolder}{Folder}) can access it directly without needing a getter method. 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{FSComponent_8h}{FSComponent.\+h}}\end{DoxyCompactItemize}

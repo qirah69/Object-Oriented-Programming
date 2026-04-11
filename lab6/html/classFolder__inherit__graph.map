@@ -1,0 +1,5 @@
+<map id="Folder" name="Folder">
+<area shape="rect" id="Node000001" title="A composite class representing a directory in the file system." alt="" coords="6,193,142,354"/>
+<area shape="rect" id="Node000002" href="$classFSComponent.html" title="An abstract base class representing a generic component in the file system." alt="" coords="5,5,143,145"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,159,77,193,72,193,72,159"/>
+</map>

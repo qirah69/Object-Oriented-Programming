@@ -1,0 +1,10 @@
+<map id="fileType.h" name="fileType.h">
+<area shape="rect" id="Node000001" title="Defines the fileType enumeration for the File System simulation." alt="" coords="5,5,89,33"/>
+<area shape="rect" id="Node000002" href="$File_8h.html" title="Defines the File class for the File System simulation." alt="" coords="19,81,75,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="50,49,50,81,44,81,44,49"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html" title="Entry point for the File System simulation." alt="" coords="6,232,88,260"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="44,124,40,157,40,184,47,232,42,232,35,185,35,156,39,124"/>
+<area shape="rect" id="Node000004" href="$tests_8h.html" title="Static test classes for File System components." alt="" coords="50,157,116,184"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="63,122,79,155,74,157,58,124"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="72,200,56,233,51,231,67,197"/>
+</map>

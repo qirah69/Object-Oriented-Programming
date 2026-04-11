@@ -1,0 +1,5 @@
+<map id="File" name="File">
+<area shape="rect" id="Node000001" title="A concrete class representing an individual file in the file system." alt="" coords="30,193,118,332"/>
+<area shape="rect" id="Node000002" href="$classFSComponent.html" title="An abstract base class representing a generic component in the file system." alt="" coords="5,5,143,145"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,160,77,193,72,193,72,160"/>
+</map>

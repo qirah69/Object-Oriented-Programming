@@ -1,0 +1,73 @@
+\doxysection{tests.\+h}
+\hypertarget{tests_8h_source}{}\label{tests_8h_source}\mbox{\hyperlink{tests_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{File_8h}{File.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Folder_8h}{Folder.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFileTest}{FileTest}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFileTest_a5104da3c4313812d78e52570b9012b48}{runAll}}()\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Running\ File\ tests..."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00023\ \ \ \ \ testConstructor();}
+\DoxyCodeLine{00024\ \ \ \ \ testGetSize();}
+\DoxyCodeLine{00025\ \ \ \ \ testGetType();}
+\DoxyCodeLine{00026\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}All\ File\ tests\ passed!\(\backslash\)n"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00027\ \ \ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ testConstructor()\ \{\ \mbox{\hyperlink{classFile}{File}}\ f(\textcolor{stringliteral}{"{}test.txt"{}},\ 100,\ \mbox{\hyperlink{fileType_8h_ab7a20842fb4918fc04269c5107ee3a17a9dffbf69ffba8bc38bc4e01abf4b1675}{fileType::Text}});\ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ testGetSize()\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ File\ f(\textcolor{stringliteral}{"{}data.bin"{}},\ 512,\ \mbox{\hyperlink{fileType_8h_ab7a20842fb4918fc04269c5107ee3a17abe53a0541a6d36f6ecb879fa2c584b08}{fileType::Image}});}
+\DoxyCodeLine{00033\ \ \ \ \ assert(f.getSize()\ ==\ 512);}
+\DoxyCodeLine{00034\ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ testGetType()\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ File\ f(\textcolor{stringliteral}{"{}image.png"{}},\ 200,\ \mbox{\hyperlink{fileType_8h_ab7a20842fb4918fc04269c5107ee3a17abe53a0541a6d36f6ecb879fa2c584b08}{fileType::Image}});}
+\DoxyCodeLine{00038\ \ \ \ \ assert(f.getType()\ ==\ \mbox{\hyperlink{fileType_8h_ab7a20842fb4918fc04269c5107ee3a17abe53a0541a6d36f6ecb879fa2c584b08}{fileType::Image}});}
+\DoxyCodeLine{00039\ \ \ \}}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFolderTest}{FolderTest}}\ \{}
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFolderTest_a59f9bc6581cd0a62d26c4b7ecfa3166b}{runAll}}()\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Running\ Folder\ tests..."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00053\ \ \ \ \ testEmptyFolder();}
+\DoxyCodeLine{00054\ \ \ \ \ testAddSingleFile();}
+\DoxyCodeLine{00055\ \ \ \ \ testRecursiveSize();}
+\DoxyCodeLine{00056\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}All\ Folder\ tests\ passed!\(\backslash\)n"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00057\ \ \ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ testEmptyFolder()\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{classFolder}{Folder}}\ f(\textcolor{stringliteral}{"{}Empty"{}});}
+\DoxyCodeLine{00061\ \ \ \ \ assert(f.getSize()\ ==\ 0);}
+\DoxyCodeLine{00062\ \ \ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ testAddSingleFile()\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ Folder\ *root\ =\ \textcolor{keyword}{new}\ Folder(\textcolor{stringliteral}{"{}Root"{}});}
+\DoxyCodeLine{00066\ \ \ \ \ File\ *f1\ =\ \textcolor{keyword}{new}\ File(\textcolor{stringliteral}{"{}file.txt"{}},\ 50,\ \mbox{\hyperlink{fileType_8h_ab7a20842fb4918fc04269c5107ee3a17a9dffbf69ffba8bc38bc4e01abf4b1675}{fileType::Text}});}
+\DoxyCodeLine{00067\ \ \ \ \ root-\/>\mbox{\hyperlink{classFolder_a9601be5e386c9a67f3e32ff9dc5ae61a}{addComponent}}(f1);}
+\DoxyCodeLine{00068\ \ \ \ \ assert(root-\/>\mbox{\hyperlink{classFolder_a82f4c955acd14cd4c135ed12002ba99c}{getSize}}()\ ==\ 50);}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{delete}\ root;}
+\DoxyCodeLine{00070\ \ \ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ testRecursiveSize()\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ Folder\ *root\ =\ \textcolor{keyword}{new}\ Folder(\textcolor{stringliteral}{"{}Root"{}});}
+\DoxyCodeLine{00074\ \ \ \ \ Folder\ *sub\ =\ \textcolor{keyword}{new}\ Folder(\textcolor{stringliteral}{"{}Sub"{}});}
+\DoxyCodeLine{00075\ \ \ \ \ File\ *f1\ =\ \textcolor{keyword}{new}\ File(\textcolor{stringliteral}{"{}f1.txt"{}},\ 100,\ \mbox{\hyperlink{fileType_8h_ab7a20842fb4918fc04269c5107ee3a17a9dffbf69ffba8bc38bc4e01abf4b1675}{fileType::Text}});}
+\DoxyCodeLine{00076\ \ \ \ \ File\ *f2\ =\ \textcolor{keyword}{new}\ File(\textcolor{stringliteral}{"{}f2.png"{}},\ 200,\ \mbox{\hyperlink{fileType_8h_ab7a20842fb4918fc04269c5107ee3a17abe53a0541a6d36f6ecb879fa2c584b08}{fileType::Image}});}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ sub-\/>\mbox{\hyperlink{classFolder_a9601be5e386c9a67f3e32ff9dc5ae61a}{addComponent}}(f1);}
+\DoxyCodeLine{00079\ \ \ \ \ root-\/>\mbox{\hyperlink{classFolder_a9601be5e386c9a67f3e32ff9dc5ae61a}{addComponent}}(f2);}
+\DoxyCodeLine{00080\ \ \ \ \ root-\/>\mbox{\hyperlink{classFolder_a9601be5e386c9a67f3e32ff9dc5ae61a}{addComponent}}(sub);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ assert(root-\/>\mbox{\hyperlink{classFolder_a82f4c955acd14cd4c135ed12002ba99c}{getSize}}()\ ==\ 300);}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{delete}\ root;}
+\DoxyCodeLine{00084\ \ \ \}}
+\DoxyCodeLine{00085\ \};}
+
+\end{DoxyCode}
