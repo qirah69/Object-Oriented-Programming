@@ -24,7 +24,10 @@ public:
   fox(int r, int c, unsigned int a) : animal(r, c, a) {}
   entityType what() const override { return entityType::FOX; }
   std::string toString() const override { return "F" + std::to_string(age); }
-  entity *next(simGrid &grid) override { return this; }
+  entity *next(simGrid &grid) override {
+    age++;
+    return this;
+  }
 };
 
 class gopher : public animal {
@@ -32,5 +35,8 @@ public:
   gopher(int r, int c, unsigned int a) : animal(r, c, a) {}
   entityType what() const override { return entityType::GOPHER; }
   std::string toString() const override { return "G" + std::to_string(age); }
-  entity *next(simGrid &grid) override { return this; }
+  entity *next(simGrid &grid) override {
+    age++;
+    return this;
+  }
 };
