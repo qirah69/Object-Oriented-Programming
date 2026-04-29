@@ -1,0 +1,17 @@
+__Artist: Queen
+__Title: Bohemian Rhapsody
+__Lyrics:
+Is this the real life?
+Is this just fantasy?
+
+__Artist: Queen
+__Title: Under Pressure
+__Lyrics:
+Pressure pushing down on me
+Pressing down on you pressure
+
+__Artist: David Bowie
+__Title: Heroes
+__Lyrics:
+I will be king
+And you will be queen
