@@ -1,22 +1,19 @@
-#include "ExtendedTest.h" // Make sure you have this if you want to run professor's tests
-#include "ShortTest.h" // Make sure you have this if you want to run professor's tests
+#include "ExtendedTest.h"
+#include "ShortTest.h"
 #include "SortedIndexedList.h"
+#include <exception>
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-// 1. Relation function for Integers (Ascending)
 bool ascInt(int a, int b) { return a <= b; }
 
-// 2. Relation function for Floats (Descending)
 bool descFloat(float a, float b) { return a >= b; }
 
-// 3. Relation function for Strings (Alphabetical)
 bool ascString(std::string a, std::string b) { return a <= b; }
 
 int main() {
-  // Optional: Run your professor's tests first
   cout << "Running standard tests..." << endl;
   testAll();
   testAllExtended();
@@ -24,29 +21,36 @@ int main() {
 
   cout << "--- Laboratory 9 Requirement: 3 Data Types ---\n" << endl;
 
-  // --- Object 1: Integer List ---
   SortedIndexedList<int> intList(ascInt);
   intList.add(10);
   intList.add(5);
   intList.add(20);
   cout << "Int List created successfully! Size: " << intList.size() << endl;
 
-  // --- Object 2: Float List ---
   SortedIndexedList<float> floatList(descFloat);
   floatList.add(3.14f);
   floatList.add(9.81f);
-  floatList.add(1.61f);
   cout << "Float List created successfully! Size: " << floatList.size() << endl;
 
-  // --- Object 3: String List ---
   SortedIndexedList<std::string> stringList(ascString);
   stringList.add("Banana");
   stringList.add("Apple");
-  stringList.add("Cherry");
   cout << "String List created successfully! Size: " << stringList.size()
        << endl;
 
-  cout << "\nAll data types compiled and ran successfully!" << endl;
+  cout << "\n--- Laboratory 9 Requirement: Exception Handling ---\n" << endl;
+
+  try {
+    cout << "Attempting to get an element at an invalid position (index 100)..."
+         << endl;
+    int invalidElement = intList.getElement(100);
+    cout << "Element is: " << invalidElement << endl;
+  } catch (const std::exception &e) {
+    cout << "Exception caught! You tried to access an invalid position."
+         << endl;
+  }
+
+  cout << "\nProgram finished executing normally." << endl;
 
   return 0;
 }
