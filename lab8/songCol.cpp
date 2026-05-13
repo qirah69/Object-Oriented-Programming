@@ -9,7 +9,6 @@
 #include <string>
 #include <vector>
 
-// Helper function to absolutely destroy invisible carriage returns and spaces
 static std::string trimStr(const std::string &str) {
   size_t first = str.find_first_not_of(" \r\n\t");
   if (std::string::npos == first)
@@ -30,7 +29,6 @@ SongCollection::SongCollection(const std::string &filename) {
   bool readingLyrics = false;
 
   while (std::getline(file, line)) {
-    // Clean the line of invisible Windows formatting ghosts
     std::string cleanLine = trimStr(line);
 
     if (line.find("__Artist:") != std::string::npos) {
@@ -45,7 +43,6 @@ SongCollection::SongCollection(const std::string &filename) {
       currLyrics += cleanLine + "\n";
     } else if (readingLyrics && cleanLine.empty()) {
       songs.push_back(Song(currTitle, currArtist, currLyrics));
-      // Reset variables so previous songs don't bleed into the next
       currTitle = "";
       currArtist = "";
       currLyrics = "";
