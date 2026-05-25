@@ -19,9 +19,9 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent) {
   QVBoxLayout *rightLayout = new QVBoxLayout();
   // Table
   QLabel *tableLabel = new QLabel("Available Songs:");
-  QTableWidget *songTable = new QTableWidget(0, 3); // 5 rows, 3 columns
+  QTableWidget *songTable = new QTableWidget(0, 4);
   // Header of the table
-  QStringList headers = {"Title", "Artist", "Duration"};
+  QStringList headers = {"Title", "Artist", "Duration", "Path"};
   songTable->setHorizontalHeaderLabels(headers);
 
   tableLabel->setBuddy(songTable);
