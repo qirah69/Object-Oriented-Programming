@@ -1,3 +1,5 @@
+#pragma once
+
 #include <fstream>
 #include <string>
 #include <vector>
@@ -10,6 +12,7 @@ private:
   unsigned int releaseYear;
 
 public:
+  Game() = default;
   Game(const std::string &name, std::vector<std::string> genres,
        const std::string &execPath, unsigned int releaseYear) {
     this->name = name;
